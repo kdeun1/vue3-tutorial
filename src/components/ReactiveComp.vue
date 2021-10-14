@@ -2,6 +2,8 @@
   <div class="hello">
     $props.modelValue : {{ $props.modelValue }}
     <br>
+    $props.otherText : {{ $props.otherText }}
+    <br>
     <button
       @click="plusTwoValue"
     >
@@ -19,6 +21,10 @@ export default {
     modelValue: {
       type: Number,
       default: 0,
+    },
+    otherText: {
+      type: String,
+      default: '',
     },
   },
   emits: {

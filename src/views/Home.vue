@@ -28,12 +28,17 @@
     <hr>
     <reactive-comp
       v-model="reactiveCompVal.cnt"
+      v-model:other-text="reactiveCompVal.text"
     />
     <button
       @click="plusOneValue"
     >
       +1
     </button>
+    <hr>
+    <div>
+      123
+    </div>
   </div>
 </template>
 
@@ -66,6 +71,7 @@ export default {
 
     const reactiveCompVal = reactive({
       cnt: 0,
+      text: 'test',
     });
     const plusOneValue = () => {
       reactiveCompVal.cnt += 1;
