@@ -50,15 +50,15 @@ export default {
   },
   setup() {
     const msg = ref('Welcome to Your Vue.js App');
+    const changeMsg = () => {
+      msg.value += '1';
+    };
+
     const petShopInfo = reactive({
       shopName: 'animal clinic',
       dogCnt: 3,
       catCnt: 10,
     });
-
-    const changeMsg = () => {
-      msg.value += '1';
-    };
     const changePetShopInfo = () => {
       petShopInfo.dogCnt += 1;
       petShopInfo.catCnt -= 1;
